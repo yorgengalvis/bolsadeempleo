@@ -1,22 +1,24 @@
-
-package modelo;
+package Negocio;
 
 public class Aspirante {
-    String nombre;
-    int edad;
-    int aniosExperiencia;
-    String profesión;
-    String imagen;
-
-    public Aspirante(String nombre, int edad, int aniosExperiencia, String profesión, String imagen) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.aniosExperiencia = aniosExperiencia;
-        this.profesión = profesión;
-        this.imagen = imagen;
-    }
+    
+    private String nombre;
+    private int edad;
+    private String profesion;
+    private int aniosExperiencia;
+    private String telefono;
+    private String rutaFoto;
 
     public Aspirante() {
+    }
+
+    public Aspirante(String nombre, int edad, String profesion, int aniosExperiencia, String telefono, String rutaFoto) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.profesion = profesion;
+        this.aniosExperiencia = aniosExperiencia;
+        this.telefono = telefono;
+        this.rutaFoto = rutaFoto;
     }
 
     public String getNombre() {
@@ -35,6 +37,14 @@ public class Aspirante {
         this.edad = edad;
     }
 
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
     public int getAniosExperiencia() {
         return aniosExperiencia;
     }
@@ -43,30 +53,22 @@ public class Aspirante {
         this.aniosExperiencia = aniosExperiencia;
     }
 
-    public String getProfesión() {
-        return profesión;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setProfesión(String profesión) {
-        this.profesión = profesión;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getRutaFoto() {
+        return rutaFoto;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setRutaFoto(String rutaFoto) {
+        this.rutaFoto = rutaFoto;
     }
-    
-    
-    
-    
-    
-   
-    
-    
-    
-    
+ 
+    //Comentario
     
 }
