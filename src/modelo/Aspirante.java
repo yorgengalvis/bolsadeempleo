@@ -1,5 +1,6 @@
 package Negocio;
 
+//Yorgen es gay y el lo sabe
 public class Aspirante {
     
     private String nombre;
