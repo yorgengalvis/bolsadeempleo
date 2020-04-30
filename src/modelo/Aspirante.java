@@ -1,5 +1,7 @@
 package Negocio;
 
+//martin te amo :*
+
 public class Aspirante {
     
     private String nombre;
