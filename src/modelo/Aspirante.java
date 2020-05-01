@@ -1,26 +1,28 @@
-package Negocio;
+package modelo;
 
-//Yorgen es gay y el lo sabe
+
 public class Aspirante {
     
     private String nombre;
-    private int edad;
     private String profesion;
     private int aniosExperiencia;
+    private int edad;
     private String telefono;
     private String rutaFoto;
 
     public Aspirante() {
     }
 
-    public Aspirante(String nombre, int edad, String profesion, int aniosExperiencia, String telefono, String rutaFoto) {
+    public Aspirante(String nombre, String profesion, int aniosExperiencia, int edad, String telefono, String rutaFoto) {
         this.nombre = nombre;
-        this.edad = edad;
         this.profesion = profesion;
         this.aniosExperiencia = aniosExperiencia;
+        this.edad = edad;
         this.telefono = telefono;
         this.rutaFoto = rutaFoto;
     }
+
+   
 
     public String getNombre() {
         return nombre;
@@ -69,7 +71,25 @@ public class Aspirante {
     public void setRutaFoto(String rutaFoto) {
         this.rutaFoto = rutaFoto;
     }
+    
+    
  
     //Comentario
+
+    @Override
+    public String toString() {
+        return "Aspirante{" + "nombre=" + nombre + ", edad=" + edad + ", profesion=" + profesion + ", aniosExperiencia=" + aniosExperiencia + ", telefono=" + telefono + '}';
+    }
     
+    
+
+
+   
+        
+        
+        
+    
+    
+
+
 }
