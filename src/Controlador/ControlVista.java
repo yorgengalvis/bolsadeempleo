@@ -21,7 +21,7 @@ public class ControlVista {
         aspirantes = control.listarAspirantes();
         String msg = "";
         for(Aspirante a: control.listarAspirantes()){
-            msg += a.toString() + "\n";
+            msg += a.getNombre()+"-"+a.getProfesion()+ ";";
         }
         return msg;
     }
@@ -32,6 +32,7 @@ public class ControlVista {
     
     public String buscarPorNombre(String nombre){        
        Aspirante aspirante = control.buscarAspirantePorNombre(nombre);
+       if(aspirante==null)return null;
        return infoDetalladaAspirante(aspirante.getNombre());
     }
     
@@ -52,6 +53,11 @@ public class ControlVista {
     
     public String aspiranteMasJoven(){
         Aspirante aspirante = control.bucarAspiranteMasJoven(aspirantes);
+        return infoDetalladaAspirante(aspirante.getNombre());
+    }
+    
+    public String aspiranteMayorEdad(){
+        Aspirante aspirante = control.buscarMayorEdad(aspirantes);
         return infoDetalladaAspirante(aspirante.getNombre());
     }
     

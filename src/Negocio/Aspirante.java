@@ -80,6 +80,10 @@ public class Aspirante {
         return "nombre=" + nombre + ", edad=" + edad + ", profesion=" + profesion + ", aniosExperiencia=" + aniosExperiencia + ", telefono=" + telefono;
     }
     
+    public String toString2(){
+       return nombre+";"+edad+";"+profesion+";"+aniosExperiencia+";"+ telefono; 
+    }
+    
     
 
 
