@@ -30,6 +30,9 @@ public class view extends javax.swing.JFrame {
         panelConsultas.setVisible(false);
     }
     
+    
+    
+    
     public void listar(){
         if(modeloLista.getSize()>0){
             panelConsultas.setVisible(true);
@@ -293,6 +296,8 @@ public class view extends javax.swing.JFrame {
 
         txtRutaADD.setEditable(false);
         txtRutaADD.setText("Selecciona la ruta");
+        txtRutaADD.setSelectionEnd(10);
+        txtRutaADD.setSelectionStart(10);
         txtRutaADD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtRutaADDActionPerformed(evt);
@@ -685,8 +690,18 @@ public class view extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.control.agregarAspirante(txtNameADD.getText(), txtProfesionADD.getText(), Integer.parseInt(txtExpADD.getText()), Integer.parseInt(txtEdadADD.getText()), txtTelefonoADD.getText(), txtRutaADD.getText());
         listar();
+        limpiar();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    public void limpiar(){
+        txtNameADD.setText("");
+        txtExpADD.setText("");
+        txtEdadADD.setText("");
+        txtTelefonoADD.setText("");
+        txtRutaADD.setText("");
+        txtProfesionADD.setText("");
+    }
+    
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         this.control.ordenarLista(0);
         this.listar();

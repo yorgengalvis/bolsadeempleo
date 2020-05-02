@@ -600,6 +600,8 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="text" type="java.lang.String" value="Selecciona la ruta"/>
+                <Property name="selectionEnd" type="int" value="10"/>
+                <Property name="selectionStart" type="int" value="10"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRutaADDActionPerformed"/>
