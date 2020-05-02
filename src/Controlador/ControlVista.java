@@ -6,10 +6,10 @@ import java.util.LinkedList;
 
 public class ControlVista {
     private ControlNegocio control;
-    private LinkedList<Aspirante> aspirantes;
+    private LinkedList<Aspirante> aspirantes = new LinkedList<>();
 
     public ControlVista() {
-        control = new ControlNegocio();
+       control = new ControlNegocio();
     }
     
     public void agregarAspirante(String nombre, String profesion, int aniosExperiencia, int edad, String telefono, String rutaFoto){
@@ -20,8 +20,8 @@ public class ControlVista {
     public String listarAspirantes(){
         aspirantes = control.listarAspirantes();
         String msg = "";
-        for(Aspirante a: aspirantes){
-            msg += a.toString();
+        for(Aspirante a: control.listarAspirantes()){
+            msg += a.toString() + "\n";
         }
         return msg;
     }

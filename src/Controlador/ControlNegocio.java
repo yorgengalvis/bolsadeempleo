@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class ControlNegocio implements ReglasNegocio {
 
-    private BolsadeEmpleo bolsadeEmpleo;
+    private BolsadeEmpleo bolsadeEmpleo = new BolsadeEmpleo();
 
     public ControlNegocio() {
 
