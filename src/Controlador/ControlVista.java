@@ -5,11 +5,11 @@ import Negocio.Aspirante;
 import java.util.LinkedList;
 
 public class ControlVista {
-    private ControlNegocio control;
+    private ControlNegocio control = new ControlNegocio();
     private LinkedList<Aspirante> aspirantes = new LinkedList<>();
 
     public ControlVista() {
-       control = new ControlNegocio();
+
     }
     
     public void agregarAspirante(String nombre, String profesion, int aniosExperiencia, int edad, String telefono, String rutaFoto){
@@ -20,7 +20,7 @@ public class ControlVista {
     public String listarAspirantes(){
         aspirantes = control.listarAspirantes();
         String msg = "";
-        for(Aspirante a: control.listarAspirantes()){
+        for(Aspirante a: aspirantes){
             msg += a.getNombre()+"-"+a.getProfesion()+ ";";
         }
         return msg;

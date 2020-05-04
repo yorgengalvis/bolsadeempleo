@@ -81,7 +81,7 @@ public class Aspirante {
     }
     
     public String toString2(){
-       return nombre+";"+edad+";"+profesion+";"+aniosExperiencia+";"+ telefono; 
+       return nombre+";"+edad+";"+profesion+";"+aniosExperiencia+";"+ telefono+";"+rutaFoto; 
     }
     
     

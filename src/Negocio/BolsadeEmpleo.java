@@ -79,7 +79,7 @@ public class BolsadeEmpleo {
         Aspirante buscado = null;
         for (Aspirante a : aspirantes) {
 
-            if (a.getNombre().equals(nombre)) {
+            if (a.getNombre().equalsIgnoreCase(nombre)) {
                 buscado = a;
             }
 
@@ -158,10 +158,9 @@ public class BolsadeEmpleo {
         Iterator<Aspirante> iter = aspirantes.iterator();
         while (iter.hasNext()) {
             Aspirante ob = iter.next();
-            if (ob.getAniosExperiencia() < anio) {
+            if (ob.getAniosExperiencia() <= anio) {
                 iter.remove();
                 v++;
-                break;
             }
         }
 
