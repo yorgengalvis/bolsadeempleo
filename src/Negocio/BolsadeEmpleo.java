@@ -158,10 +158,9 @@ public class BolsadeEmpleo {
         Iterator<Aspirante> iter = aspirantes.iterator();
         while (iter.hasNext()) {
             Aspirante ob = iter.next();
-            if (ob.getAniosExperiencia() < anio) {
+            if (ob.getAniosExperiencia() <= anio) {
                 iter.remove();
                 v++;
-                break;
             }
         }
 

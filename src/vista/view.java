@@ -18,7 +18,7 @@ public class view extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.control = new ControlVista();
         this.jListAspirantes.setModel(modeloLista);
-        panelConsultas.setVisible(false);
+        panelConsultas.setVisible(true);
     }
 
     public void listar() {
@@ -116,7 +116,7 @@ public class view extends javax.swing.JFrame {
         jLabel3.setText("EJERCICIO PRÁCTICO ESTRUCTURA DE DATOS");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setText("1151791 - 1151804 - 1151614");
+        jLabel4.setText("1151791 - 1151804 - 1151819");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
