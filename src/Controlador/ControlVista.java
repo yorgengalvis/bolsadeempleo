@@ -5,11 +5,11 @@ import Negocio.Aspirante;
 import java.util.LinkedList;
 
 public class ControlVista {
-    private ControlNegocio control;
+    private ControlNegocio control = new ControlNegocio();
     private LinkedList<Aspirante> aspirantes = new LinkedList<>();
 
     public ControlVista() {
-       control = new ControlNegocio();
+
     }
     
     public void agregarAspirante(String nombre, String profesion, int aniosExperiencia, int edad, String telefono, String rutaFoto){
@@ -20,8 +20,8 @@ public class ControlVista {
     public String listarAspirantes(){
         aspirantes = control.listarAspirantes();
         String msg = "";
-        for(Aspirante a: control.listarAspirantes()){
-            msg += a.toString() + "\n";
+        for(Aspirante a: aspirantes){
+            msg += a.getNombre()+"-"+a.getProfesion()+ ";";
         }
         return msg;
     }
@@ -32,6 +32,7 @@ public class ControlVista {
     
     public String buscarPorNombre(String nombre){        
        Aspirante aspirante = control.buscarAspirantePorNombre(nombre);
+       if(aspirante==null)return null;
        return infoDetalladaAspirante(aspirante.getNombre());
     }
     
@@ -52,6 +53,11 @@ public class ControlVista {
     
     public String aspiranteMasJoven(){
         Aspirante aspirante = control.bucarAspiranteMasJoven(aspirantes);
+        return infoDetalladaAspirante(aspirante.getNombre());
+    }
+    
+    public String aspiranteMayorEdad(){
+        Aspirante aspirante = control.buscarMayorEdad(aspirantes);
         return infoDetalladaAspirante(aspirante.getNombre());
     }
     

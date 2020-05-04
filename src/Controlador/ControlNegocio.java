@@ -57,6 +57,11 @@ public class ControlNegocio implements ReglasNegocio {
     public Aspirante bucarAspiranteMasJoven(LinkedList<Aspirante> aspirantes) {
         return bolsadeEmpleo.aspiranteMasJoven();
     }
+    
+    @Override
+    public Aspirante buscarMayorEdad(LinkedList<Aspirante> aspirantes){
+        return bolsadeEmpleo.aspiranteMayor();
+    }
 
     @Override
     public void contratarAspirante(String nombre) {

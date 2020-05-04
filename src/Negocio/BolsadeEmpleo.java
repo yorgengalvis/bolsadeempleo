@@ -79,14 +79,14 @@ public class BolsadeEmpleo {
         Aspirante buscado = null;
         for (Aspirante a : aspirantes) {
 
-            if (a.getNombre().equals(nombre)) {
+            if (a.getNombre().equalsIgnoreCase(nombre)) {
                 buscado = a;
             }
 
         }
 
         if (buscado == null) {
-            System.out.println("No hay aspirante con ese nombre");
+            return null;
         }
         return buscado;
     }
@@ -188,7 +188,7 @@ public class BolsadeEmpleo {
         String msg = "";
         for(Aspirante a: aspirantes){
             if (a.getNombre().equalsIgnoreCase(nombre)) {
-                msg = a.toString();
+                msg = a.toString2();
                 break;
             }
         }

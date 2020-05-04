@@ -15,6 +15,7 @@ public interface ReglasNegocio {
     public void ordenarPorProfesion(LinkedList<Aspirante> aspirantes);
     public Aspirante buscarAspiranteConMasExperiencia(LinkedList<Aspirante> aspirantes);
     public Aspirante bucarAspiranteMasJoven(LinkedList<Aspirante> aspirantes);
+    public Aspirante buscarMayorEdad(LinkedList<Aspirante> aspirantes);
     public void contratarAspirante(String nombre);
     public void eliminarAspiranteCuyaExperienciaSeaMenorQueEstablecida(int anios);
     
